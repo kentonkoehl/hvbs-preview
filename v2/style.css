@@ -733,3 +733,21 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .people .blk .big { text-transform: uppercase; letter-spacing: -0.02em; }
 .people .blk .big { white-space: normal; }
 .pinned-mid { flex: 1; margin: 0; }
+
+/* Photo spots: where Mark's real photos go. Deliberate, labeled, never broken looking. */
+.photos { display: grid; grid-template-columns: 1fr; gap: 10px; padding: 0 16px 48px; }
+.ph {
+  min-height: 210px; display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 18px; border: 3px solid var(--ink);
+  background-color: var(--concrete);
+  background-image: repeating-linear-gradient(-45deg, transparent 0 14px, rgba(28, 26, 23, 0.07) 14px 16px);
+}
+.ph-tag { margin: 0 0 4px; font-family: var(--display); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--red); }
+.ph-what { margin: 0 0 6px; font-family: var(--display); font-size: 1.5rem; line-height: 1.05; text-transform: uppercase; color: var(--ink); }
+.ph-note { margin: 0; font-size: 0.95rem; line-height: 1.45; max-width: 36ch; color: var(--ink); }
+@media (min-width: 900px) {
+  .photos { grid-template-columns: repeat(13, 1fr); padding: 0 32px 72px; }
+  .ph { min-height: 320px; }
+  .pw3 { grid-column: span 3; } .pw4 { grid-column: span 4; } .pw5 { grid-column: span 5; }
+  .pw6 { grid-column: span 6; } .pw7 { grid-column: span 7; }
+}
